@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c49d1bc-406e-40b2-94f8-df64dd6f21c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/latest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/latest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +199,7 @@
       <workItem from="1616449114639" duration="30426000" />
       <workItem from="1616965092254" duration="926000" />
       <workItem from="1616966182245" duration="5004000" />
-      <workItem from="1617049290127" duration="49117000" />
+      <workItem from="1617049290127" duration="49917000" />
     </task>
     <servers />
   </component>
@@ -223,6 +219,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1617051694882" />
+    <state x="518" y="79" width="319" height="643" key="RollbackChangesDialog" timestamp="1617571716112">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="518" y="79" width="319" height="643" key="RollbackChangesDialog/0.27.1366.741@0.27.1366.741" timestamp="1617571716112" />
     <state x="235" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1616615689519">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
