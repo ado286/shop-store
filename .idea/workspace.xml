@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c49d1bc-406e-40b2-94f8-df64dd6f21c5" name="Default Changelist" comment="" />
+    <list default="true" id="9c49d1bc-406e-40b2-94f8-df64dd6f21c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/latest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/latest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +26,9 @@
         <option value="blade" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -146,6 +155,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1q86x6nIVTN5VLIlLo97pGNHRQN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -153,6 +163,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/tailwind-starter-kit-main" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -192,7 +203,7 @@
       <workItem from="1616449114639" duration="30426000" />
       <workItem from="1616965092254" duration="926000" />
       <workItem from="1616966182245" duration="5004000" />
-      <workItem from="1617049290127" duration="46818000" />
+      <workItem from="1617049290127" duration="49117000" />
     </task>
     <servers />
   </component>
@@ -200,10 +211,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="212" y="202" width="932" height="398" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617271277221">
+    <state x="212" y="202" width="932" height="398" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617569717000">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="212" y="202" width="932" height="398" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1617271277221" />
+    <state x="212" y="202" width="932" height="398" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1617569717000" />
     <state x="416" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1617109862197">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
