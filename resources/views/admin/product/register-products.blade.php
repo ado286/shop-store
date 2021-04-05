@@ -1,5 +1,5 @@
 @extends('layouts.myApp')
-
+@section('title', 'Create')
 @section('content')
 <div class="container mx-auto mt-10 sm:mt-0">
     <div class="md:grid md:grid-cols-3 md:gap-6">

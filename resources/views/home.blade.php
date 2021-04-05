@@ -1,5 +1,6 @@
 @extends('layouts.myApp')
 
+@section('title', 'Home')
 @section('content')
 
 <div class="carousel relative container mx-auto" style="max-width:1600px;">

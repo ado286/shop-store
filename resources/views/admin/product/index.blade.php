@@ -1,6 +1,5 @@
 @extends('layouts.myApp')
-
-
+@section('title', 'Products')
 @section('content')
    <body class="flex items-center justify-center">
    <div class="container px-6 mx-auto">
