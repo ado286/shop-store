@@ -20,7 +20,6 @@ class ProductController extends Controller
     public function index()
     {
         //
-//        $products = Product::pluck('id', 'name', 'price', 'description', 'created_at', 'updated_at');
         $products = Product::all();
         return view('admin.product.index', ['products'=>$products]);
     }
@@ -116,14 +115,14 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
         if($product->photo){
             $productPath = public_path($product->photo->file);
-            unlink($productPath);
+            if(file_exists($productPath)){
+                unlink($productPath);
+            }
         }
         $product->delete();
-        session()->flash('delete', 'Obrisano govno');
-
+        session()->flash('delete', 'Product is deleted.');
 
         return redirect()->back();
-
     }
     public function users(){
         $role = Role::pluck('name', 'id');

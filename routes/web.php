@@ -16,6 +16,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/product/{id}', [HomeController::class, 'show'])->name('product');
 //Route::get('/register-products', [HomeController::class, 'create'])->name('register-products');
 //Route::resource('/admin/product', ProductController::class);
 

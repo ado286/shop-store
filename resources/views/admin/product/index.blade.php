@@ -25,29 +25,35 @@
            </tr>
            </thead>
            <tbody class="flex-1 sm:flex-none">
-           @foreach($products as $product)
+           @if(count($products))
+               @foreach($products as $product)
+                   <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+                       <td class="border-grey-light border hover:bg-gray-100 p-3">{{$product->id}}</td>
+                       <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">{{$product->name}}</td>
+                       <td class="border-grey-light border hover:bg-gray-100 p-3 truncate"><img width="100px" src="{{$product->photo ? $product->photo->file : "http://via.placeholder.com/100x100"}}" alt=""></td>
+                       <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">{{$product->description}}</td>
+                       <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">{{$product->price}}</td>
+                       <td class="border-grey-light border hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer">
+                           <form action="{{route('product.destroy', ['product'=>$product->id])}}" method="POST">
+                               @csrf
+                               @method('DELETE')
+                               <button>Delete</button>
+                            </form>
+                       </td>
+                       <td class="border-grey-light border hover:bg-gray-100 p-3 text-blue-400 hover:text-blue-600 hover:font-medium cursor-pointer">
+                           <form action="{{route('product.edit', ['product'=>$product->id])}}" method="POST">
+                               @csrf
+                               @method('GET')
+                                <button>Edit</button>
+                           </form>
+                       </td>
+                   </tr>
+               @endforeach
+           @else
                <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
-                   <td class="border-grey-light border hover:bg-gray-100 p-3">{{$product->id}}</td>
-                   <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">{{$product->name}}</td>
-                   <td class="border-grey-light border hover:bg-gray-100 p-3 truncate"><img width="100px" src="{{$product->photo ? $product->photo->file : "http://via.placeholder.com/100x100"}}" alt=""></td>
-                   <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">{{$product->description}}</td>
-                   <td class="border-grey-light border hover:bg-gray-100 p-3 truncate">{{$product->price}}</td>
-                   <td class="border-grey-light border hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer">
-                       <form action="{{route('product.destroy', ['product'=>$product->id])}}" method="POST">
-                           @csrf
-                           @method('DELETE')
-                           <button>Delete</button>
-                        </form>
-                   </td>
-                   <td class="border-grey-light border hover:bg-gray-100 p-3 text-blue-400 hover:text-blue-600 hover:font-medium cursor-pointer">
-                       <form action="{{route('product.edit', ['product'=>$product->id])}}" method="POST">
-                           @csrf
-                           @method('GET')
-                            <button>Edit</button>
-                       </form>
-                   </td>
+                   <td class="border-grey-light border hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer">No products there</td>
                </tr>
-           @endforeach
+           @endif
            </tbody>
        </table>
    </div>

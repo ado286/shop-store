@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="9c49d1bc-406e-40b2-94f8-df64dd6f21c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/2021-03-30 09:58:01Screenshot from 2020-03-29 16-04-20.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/2021-03-30 09:58:01Screenshot from 2020-03-29 16-04-20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/2021-03-30 09:59:42The Andromeda Strain.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/2021-03-30 09:59:42The Andromeda Strain.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/nav_bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/nav_bar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/myApp.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/myApp.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +24,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -159,6 +182,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -175,6 +199,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/user" />
       <recent name="$PROJECT_DIR$/resources/views/admin" />
       <recent name="$PROJECT_DIR$/resources/views/product" />
       <recent name="$PROJECT_DIR$/resources/views" />
@@ -200,7 +225,8 @@
       <workItem from="1616449114639" duration="30426000" />
       <workItem from="1616965092254" duration="926000" />
       <workItem from="1616966182245" duration="5004000" />
-      <workItem from="1617049290127" duration="56474000" />
+      <workItem from="1617049290127" duration="83646000" />
+      <workItem from="1618149316811" duration="1574000" />
     </task>
     <servers />
   </component>
@@ -228,6 +254,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="235" y="31" width="1022" height="737" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1616615689519" />
+    <state x="455" y="317" width="445" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617873595296">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="455" y="317" width="445" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1617873595296" />
     <state x="347" y="174" key="run.anything.popup" timestamp="1616452493877">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -236,9 +266,9 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1617231317064" />
-    <state x="408" y="299" width="540" height="203" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1616541766372">
+    <state x="408" y="299" width="540" height="203" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1617874162282">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="408" y="299" width="540" height="203" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1366.741@0.27.1366.741" timestamp="1616541766372" />
+    <state x="408" y="299" width="540" height="203" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1366.741@0.27.1366.741" timestamp="1617874162282" />
   </component>
 </project>

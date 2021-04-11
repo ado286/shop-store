@@ -50,6 +50,10 @@ class HomeController extends Controller
     public function show($id)
     {
         //
+        $products = Product::all();
+        $product = Product::findOrFail($id);
+        return view('user.product', ['product'=> $product, 'products'=>$products]);
+
     }
 
     /**
@@ -89,8 +93,8 @@ class HomeController extends Controller
         //
     }
     public function home(){
-        $products = Product::all();
+        $products = Product::paginate(2);
 
-        return view('home', ['products'=>$products]);
+        return view('user.home', ['products'=>$products]);
     }
 }
