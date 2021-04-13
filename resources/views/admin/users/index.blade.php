@@ -26,7 +26,7 @@
                             <td class="p-3 px-5"><input type="text" name="email" value="{{$user->email}}" class="bg-transparent"></td>
                             <td class="p-3 px-5">
                                 <select value="user.re" class="bg-transparent">
-                                    <option value="user">{{$user->role->name}}</option>
+                                    <option value="user">{{$user->role->name ?? "no roles"}}</option>
                                     <hr>
                                     <option value="1">{{$roles['1']}}</option>
                                     <option value="2">{{$roles['2']}}</option>

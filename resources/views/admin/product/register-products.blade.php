@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mx-auto mt-10 sm:mt-0">
     <div class="md:grid md:grid-cols-3 md:gap-6">
-        <div class="mt-5 md:mt-0 md:col-span-2">
+        <div class="mt-5 md:mt-0 md:col-span-4">
             <form action="{{route('product.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="shadow overflow-hidden sm:rounded-md">
@@ -11,6 +11,18 @@
                         @if(Session::has('product_message'))
                             <h3 class="bg-green-200">{{session('product_message')}}</h3>
                             @endif
+                            <div class="text-red-dark pl-4 pr-8 py-3 rounded relative" role="alert">
+                                @if(count($errors)>0)
+                                    <div class="bg-red-lightest border border-red-light ">
+                                        <ul>
+                                            @foreach($errors->all() as $error)
+                                                <li class="bg-red-200">{{$error}}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                                <span class="absolute pin-t pin-b pin-r pr-2 py-3"></span>
+                            </div>
                         <h3 class="text-lg font-medium leading-6 text-gray-900">Create product for shop</h3>
                         <hr>
                         <br>
@@ -35,7 +47,7 @@
                             <div class="col-span-3">
                                 <div class="col-span-6">
                                     <label for="photo_id" class="block text-sm font-medium text-gray-700">Choose a photo</label>
-                                    <input type="file" name="file_name" id="photo_id" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                    <input type="file" name="photo" id="photo_id" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                 </div>
                             </div>
                         </div>
@@ -51,6 +63,7 @@
         <div class="md:col-span-1">
         </div>
     </div>
+
 </div>
 
 @stop

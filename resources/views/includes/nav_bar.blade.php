@@ -60,13 +60,14 @@
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>
-                            <x-jet-dropdown-link href="{{route('product.create')}}">
-                                {{__('Create products')}}
-                            </x-jet-dropdown-link>
-                            <x-jet-dropdown-link href="{{route('product.index')}}">
-                                {{__('Edit products')}}
-                            </x-jet-dropdown-link>
-
+                            @if( Auth::user()->isAdmin())
+                                <x-jet-dropdown-link href="{{route('product.create')}}">
+                                    {{__('Create products')}}
+                                </x-jet-dropdown-link>
+                                <x-jet-dropdown-link href="{{route('product.index')}}">
+                                    {{__('Edit products')}}
+                                </x-jet-dropdown-link>
+                            @endif
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
                                     {{ __('API Tokens') }}
@@ -97,7 +98,7 @@
                     </svg>
                 </a>
             @endif
-
+            {{--  Cart menu --}}
             <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
             <div x-data="{ cartOpen: false , isOpen: false }" class="">
@@ -186,21 +187,13 @@
                         </div>
                         <span class="text-gray-600">20$</span>
                     </div>
-                    <div class="mt-8">
-                        <form class="flex items-center justify-center">
-                            <input class="form-input w-48" type="text" placeholder="Add promocode">
-                            <button class="ml-3 flex items-center px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
-                                <span>Apply</span>
-                            </button>
-                        </form>
-                    </div>
                     <a class="flex items-center justify-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
                         <span>Chechout</span>
                         <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
                 </div>
             </div>
-
+            {{--            End cart menu--}}
         </div>
     </div>
 </nav>

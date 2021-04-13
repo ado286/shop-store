@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mx-auto mt-10 sm:mt-0">
         <div class="md:grid md:grid-cols-3 md:gap-6">
-            <div class="mt-5 md:mt-0 md:col-span-2">
+            <div class="mt-5 md:mt-0 md:col-span-4">
                 <form action="{{route('product.update', ['product'=> $product->id])}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
@@ -32,7 +32,7 @@
                                 </div>
 
                                 <div class="col-span-3">
-                                    <img width="100px" src="{{ $product->photo ?  $product->photo->file : "http://via.placeholder.com/100x100" }}" alt="">
+                                    <img width="200px" src="{{ $product->photo ?  $product->photo->file : "http://via.placeholder.com/200x200" }}" alt="">
                                     <div class="col-span-6">
                                         <label for="photo_id" class="block text-sm font-medium text-gray-700">Choose another photo</label>
                                         <input type="file" name="file_name" id="photo_id" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">

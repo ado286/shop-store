@@ -102,7 +102,7 @@
         @foreach($products as $product)
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                 <a href="{{route('product', ['id'=>$product->id])}}">
-                    <img class="hover:grow hover:shadow-lg" src="{{$product->photo ? $product->photo->file : "http://via.placeholder.com/272x272"}}">
+                    <img class="hover:grow hover:shadow-lg" src="{{$product->photo->file ?? "http://via.placeholder.com/272x272"}}">
                     <div class="pt-3 flex items-center justify-between">
                         <p class="">{{$product->name}}</p>
                         <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

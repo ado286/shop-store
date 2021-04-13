@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProductRequest;
 use App\Models\Photo;
 use App\Models\Product;
 use App\Models\Role;
@@ -41,16 +42,16 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
         $product = $request->all();
 
         if($request->file()){
-            $photo_name = Carbon::now() . $request->file('file_name')->getClientOriginalName();
+            $photo_name = Carbon::now() . $request->file('photo')->getClientOriginalName();
             $photo_id = Photo::create(['file' => $photo_name]);
 
             $destPath = 'images';
-            $request->file('file_name')->move($destPath, $photo_name);
+            $request->file('photo')->move($destPath, $photo_name);
             $product['photo_id'] = $photo_id->id;
         }else{
 

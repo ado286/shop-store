@@ -24,7 +24,7 @@
                                     reader.readAsDataURL($refs.photo.files[0]);
                             " />
 
-                <x-jet-label for="photo" value="{{ __('Photo') }}" />
+
 
                 <!-- Current Profile Photo -->
                 <div class="mt-2" x-show="! photoPreview">
@@ -65,22 +65,15 @@
             <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
             <x-jet-input-error for="email" class="mt-2" />
         </div>
+        <!-- Role -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="role" value="{{ __('Role') }}" />
-            <x-jet-input id="role" type="radio" class="form-radio" wire:model.defer="state.email" />
-            <x-jet-input-error for="email" class="mt-2" />
+            <x-jet-input id="role" type="text" class="form-radio" wire:model.defer="state.role_id" />
+            <x-jet-input-error for="role" class="mt-2" />
         </div>
-{{--        <div class="mb-4">--}}
-{{--            <label for="tagids" class="block text-gray-700 text-sm font-bold mb-2">Tags:</label>--}}
-{{--            <select multiple name="tagids[]" id="tagids[]" wire:model="tagids" class="shadow appearance-none w-full border text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:shadow-outline">--}}
-{{--                @if($this->tags)--}}
-{{--                    <option value="ado">Otpa</option>--}}
-{{--                @foreach ($tags as $tag)--}}
-{{--                    <option value="{{ $tag->id }}">{{ $tag->title }}</option>--}}
-{{--                @endforeach--}}
-{{--                    @endif--}}
-{{--            </select>--}}
-{{--        </div>--}}
+
+
+
     </x-slot>
 
     <x-slot name="actions">
