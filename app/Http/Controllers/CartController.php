@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Photo;
-use App\Models\Product;
-use Carbon\Carbon;
+use Cart;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-
+        //
     }
 
     /**
@@ -26,7 +24,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        return "done";
+        //
     }
 
     /**
@@ -38,7 +36,9 @@ class HomeController extends Controller
     public function store(Request $request)
     {
 
-
+        Cart::add($request->product_id, $request->product_name, 1, $request->product_price)->associate('\App\Models\Product');
+        session()->flash('success_message', 'Item added in Cart');
+        return redirect()->back();
     }
 
     /**
@@ -50,10 +50,6 @@ class HomeController extends Controller
     public function show($id)
     {
         //
-        $products = Product::all();
-        $product = Product::findOrFail($id);
-        return view('user.product', ['product'=> $product, 'products'=>$products]);
-
     }
 
     /**
@@ -65,7 +61,6 @@ class HomeController extends Controller
     public function edit($id)
     {
         //
-
     }
 
     /**
@@ -78,8 +73,6 @@ class HomeController extends Controller
     public function update(Request $request, $id)
     {
         //
-        return 'done';
-
     }
 
     /**
@@ -91,13 +84,5 @@ class HomeController extends Controller
     public function destroy($id)
     {
         //
-    }
-    public function home(){
-        $products = Product::paginate(2);
-
-        return view('user.home', ['products'=>$products]);
-    }
-    public function about(){
-        return view('user.about');
     }
 }

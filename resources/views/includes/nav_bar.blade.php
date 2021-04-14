@@ -13,7 +13,7 @@
             <nav>
                 <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                     <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="/">Shop</a></li>
-                    <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">About</a></li>
+                    <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('about')}}">About</a></li>
                 </ul>
             </nav>
         </div>
@@ -133,64 +133,71 @@
                         </button>
                     </div>
                     <hr class="my-3">
-                    <div class="flex justify-between mt-6">
-                        <div class="flex">
-                            <img class="h-20 w-20 object-cover rounded" src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80" alt="">
-                            <div class="mx-3">
-                                <h3 class="text-sm text-gray-600">Mac Book Pro</h3>
-                                <div class="flex items-center mt-2">
-                                    <button class="text-gray-500 focus:outline-none focus:text-gray-600">
-                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                    </button>
-                                    <span class="text-gray-700 mx-2">2</span>
-                                    <button class="text-gray-500 focus:outline-none focus:text-gray-600">
-                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                    </button>
+
+                    <!-- Excample for Cart Item -->
+
+{{--                    <div class="flex justify-between mt-6">--}}
+{{--                        <div class="flex">--}}
+{{--                            <img class="h-20 w-20 object-cover rounded" src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80" alt="">--}}
+{{--                            <div class="mx-3">--}}
+{{--                                <h3 class="text-sm text-gray-600">Mac Book Pro</h3>--}}
+{{--                                <div class="flex items-center mt-2">--}}
+{{--                                    <button class="text-gray-500 focus:outline-none focus:text-gray-600">--}}
+{{--                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>--}}
+{{--                                    </button>--}}
+{{--                                    <span class="text-gray-700 mx-2">2</span>--}}
+{{--                                    <button class="text-gray-500 focus:outline-none focus:text-gray-600">--}}
+{{--                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>--}}
+{{--                                    </button>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <span class="text-gray-600">20$</span>--}}
+{{--                    </div>--}}
+
+
+                    <!-- Cart Item -->
+
+                    @foreach(Cart::content() as $item)
+                        <div class="flex justify-between mt-6">
+                            <div class="flex">
+                                <img class="h-20 w-20 object-cover rounded" src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80" alt="">
+                                <div class="mx-3">
+                                    <h3 class="text-sm text-gray-600">{{$item->name}}</h3>
+                                    <div class="flex items-center mt-2">
+                                        <form action="{{route('addCart')}}" method="GET">
+                                            @method('POST')
+                                            <input type="hidden" name="product_id" value="{{$item->id}}">
+                                            <input type="hidden" name="product_name" value="{{$item->name}}">
+                                            <input type="hidden" name="product_price" value="{{$item->price}}">
+                                        <button class="text-gray-500 focus:outline-none focus:text-gray-600">
+                                            <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        </button>
+                                        </form>
+                                        <span class="text-gray-700 mx-2">{{$item->qty}}</span>
+
+                                        <button class="text-gray-500 focus:outline-none focus:text-gray-600">
+                                            <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        </button>
+
+                                    </div>
                                 </div>
                             </div>
+                            <span class="text-gray-600">{{$item->total}}€</span>
                         </div>
-                        <span class="text-gray-600">20$</span>
-                    </div>
-                    <div class="flex justify-between mt-6">
-                        <div class="flex">
-                            <img class="h-20 w-20 object-cover rounded" src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80" alt="">
-                            <div class="mx-3">
-                                <h3 class="text-sm text-gray-600">Mac Book Pro</h3>
-                                <div class="flex items-center mt-2">
-                                    <button class="text-gray-500 focus:outline-none focus:text-gray-600">
-                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                    </button>
-                                    <span class="text-gray-700 mx-2">2</span>
-                                    <button class="text-gray-500 focus:outline-none focus:text-gray-600">
-                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="text-gray-600">20$</span>
-                    </div>
-                    <div class="flex justify-between mt-6">
-                        <div class="flex">
-                            <img class="h-20 w-20 object-cover rounded" src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80" alt="">
-                            <div class="mx-3">
-                                <h3 class="text-sm text-gray-600">Mac Book Pro</h3>
-                                <div class="flex items-center mt-2">
-                                    <button class="text-gray-500 focus:outline-none focus:text-gray-600">
-                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                    </button>
-                                    <span class="text-gray-700 mx-2">2</span>
-                                    <button class="text-gray-500 focus:outline-none focus:text-gray-600">
-                                        <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="text-gray-600">20$</span>
-                    </div>
-                    <a class="flex items-center justify-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
-                        <span>Chechout</span>
+                    @endforeach
+                    @if(!Auth::check())
+                        <a href="{{route('login')}}" class="flex items-center justify-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                            <span>Login to pay</span>
+                            <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+
+                        @else
+                    <a href="/soon" class="flex items-center justify-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                        <span>Go to pay</span>
                         <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
+                        @endif
                 </div>
             </div>
             {{--            End cart menu--}}

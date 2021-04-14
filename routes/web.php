@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -17,12 +18,10 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/product/{id}', [HomeController::class, 'show'])->name('product');
-//Route::get('/register-products', [HomeController::class, 'create'])->name('register-products');
-//Route::resource('/admin/product', ProductController::class);
+Route::get('/about', [HomeController::class, 'about'])->name('about');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/cartadd', [CartController::class, 'store'])->name('addCart');
+
 
 Route::middleware(['auth:sanctum', 'verified', 'admins'])->resource('/admin/product', ProductController::class);
 
