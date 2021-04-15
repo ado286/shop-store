@@ -8,6 +8,8 @@
         <div class="container mx-auto px-6">
             @if(Session::has('success_message'))
                <h3 class="bg-green-200">{{session('success_message')}}</h3>
+                <hr>
+                <br>
             @endif
             <div class="md:flex md:items-center">
                 <div class="w-full h-64 md:w-1/2 lg:h-96">
@@ -44,14 +46,13 @@
                         </div>
                     </div>
                     <div class="flex items-center mt-6">
-
-
                         <button class="px-8 py-2 bg-indigo-600 text-white text-sm font-medium rounded hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500">Order Now</button>
                         <form action="{{route('addCart')}}" method="GET">
                             @method('POST')
                             <input type="hidden" name="product_id" value="{{$product->id}}">
                             <input type="hidden" name="product_name" value="{{$product->name}}">
                             <input type="hidden" name="product_price" value="{{$product->price}}">
+                            <input type="hidden" name="product_photo" value="{{$product->photo->file}}">
 
                             <button class="mx-2 text-gray-600 border rounded-md p-2 hover:bg-gray-200 focus:outline-none">
                                 <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
@@ -66,9 +67,16 @@
                 @foreach($products as $product)
                     <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
                         <div class="flex items-end justify-end h-56 w-full bg-cover" style="background-image: url('{{$product->photo->file ?? "http://via.placeholder.com/250x250"}}')">
+                            <form action="{{route('addCart')}}" method="GET">
+                                @method('POST')
+                                <input type="hidden" name="product_id" value="{{$product->id}}">
+                                <input type="hidden" name="product_name" value="{{$product->name}}">
+                                <input type="hidden" name="product_price" value="{{$product->price}}">
+                                <input type="hidden" name="product_photo" value="{{$product->photo->file}}">
                             <button class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
                                 <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                             </button>
+                            </form>
                         </div>
                         <div class="px-5 py-3">
                             <h3 class="text-gray-700 uppercase">{{$product->name}}</h3>

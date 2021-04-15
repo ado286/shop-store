@@ -36,7 +36,7 @@ class CartController extends Controller
     public function store(Request $request)
     {
 
-        Cart::add($request->product_id, $request->product_name, 1, $request->product_price)->associate('\App\Models\Product');
+        Cart::add($request->product_id, $request->product_name, 1, $request->product_price, ['photo'=>$request->product_photo])->associate('Product');
         session()->flash('success_message', 'Item added in Cart');
         return redirect()->back();
     }

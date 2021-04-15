@@ -93,7 +93,7 @@ class HomeController extends Controller
         //
     }
     public function home(){
-        $products = Product::paginate(2);
+        $products = Product::paginate(4);
 
         return view('user.home', ['products'=>$products]);
     }

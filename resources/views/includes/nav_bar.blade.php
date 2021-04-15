@@ -1,4 +1,4 @@
-<nav id="header" class="w-full z-30 top-0 py-1 bg-gray-100">
+<nav id="header" class="relative w-full z-30 top-0 py-1 bg-gray-100">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
 
         <label for="menu-toggle" class="cursor-pointer md:hidden block">
@@ -157,11 +157,11 @@
 
 
                     <!-- Cart Item -->
-
+                    @if(count(Cart::content()) > 0)
                     @foreach(Cart::content() as $item)
                         <div class="flex justify-between mt-6">
                             <div class="flex">
-                                <img class="h-20 w-20 object-cover rounded" src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80" alt="">
+                                <img class="h-20 w-20 object-cover rounded" src="{{$item->options->photo}}" alt="">
                                 <div class="mx-3">
                                     <h3 class="text-sm text-gray-600">{{$item->name}}</h3>
                                     <div class="flex items-center mt-2">
@@ -183,7 +183,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span class="text-gray-600">{{$item->total}}€</span>
+                            <span class="text-gray-600">{{$item->subtotal}}€</span>
                         </div>
                     @endforeach
                     @if(!Auth::check())
@@ -192,12 +192,15 @@
                             <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                         </a>
 
-                        @else
-                    <a href="/soon" class="flex items-center justify-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
-                        <span>Go to pay</span>
-                        <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
-                        @endif
+                    @else
+                        <a href="/soon" class="flex items-center justify-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                            <span>Go to pay</span>
+                            <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    @endif
+                    @else
+                        <h1>Item not added.</h1>
+                    @endif
                 </div>
             </div>
             {{--            End cart menu--}}

@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminRoleController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
@@ -25,4 +27,4 @@ Route::get('/cartadd', [CartController::class, 'store'])->name('addCart');
 
 Route::middleware(['auth:sanctum', 'verified', 'admins'])->resource('/admin/product', ProductController::class);
 
-Route::middleware(['admins'])->get('/admin', [ProductController::class, 'users']);
+Route::middleware(['admins'])->resource('/admin', AdminRoleController::class);

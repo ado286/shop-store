@@ -125,9 +125,4 @@ class ProductController extends Controller
 
         return redirect()->back();
     }
-    public function users(){
-        $role = Role::pluck('name', 'id');
-        $users = User::all();
-        return view('admin.users.index', ['users'=>$users, 'roles'=>$role]);
-    }
 }
