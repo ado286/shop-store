@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Cart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
 {
@@ -73,6 +74,11 @@ class CartController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $cart = Cart::get($request->product_rowid);
+        $qty = $cart->qty +1;
+
+        Cart::update($request->product_rowid, $qty);
+        return redirect()->back();
     }
 
     /**
@@ -84,5 +90,14 @@ class CartController extends Controller
     public function destroy($id)
     {
         //
+
+        $cart = Cart::get($id);
+
+        if(($qty = $cart->qty -1) == 0){
+            Cart::remove($id);
+        }else {
+        Cart::update($id, $qty);}
+
+        return redirect()->back();
     }
 }

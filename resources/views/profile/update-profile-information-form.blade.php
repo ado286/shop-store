@@ -68,7 +68,7 @@
         <!-- Role -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="role" value="{{ __('Role') }}" />
-            <x-jet-input id="role" type="text" class="form-radio" wire:model.defer="state.role_id" />
+            <x-jet-input id="role" type="text" class="" wire:model.defer="state.role_id" />
             <x-jet-input-error for="role" class="mt-2" />
         </div>
 

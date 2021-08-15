@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c49d1bc-406e-40b2-94f8-df64dd6f21c5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/latest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/latest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/nav_bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/nav_bar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +87,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
-      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
@@ -227,7 +229,13 @@
       <workItem from="1616966182245" duration="5004000" />
       <workItem from="1617049290127" duration="83646000" />
       <workItem from="1618149316811" duration="4305000" />
-      <workItem from="1618181710218" duration="38575000" />
+      <workItem from="1618181710218" duration="40719000" />
+      <workItem from="1618694738119" duration="1212000" />
+      <workItem from="1618873261856" duration="3334000" />
+      <workItem from="1619047277462" duration="6088000" />
+      <workItem from="1619482186756" duration="1819000" />
+      <workItem from="1627579623751" duration="2531000" />
+      <workItem from="1628946487447" duration="11238000" />
     </task>
     <servers />
   </component>
@@ -235,41 +243,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="212" y="202" width="932" height="398" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617569717000">
+    <state x="479" y="322" width="397" height="158" key="NewPhpFileDialog" timestamp="1627634061317">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="212" y="202" width="932" height="398" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1617569717000" />
-    <state x="416" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1618441271061">
+    <state x="479" y="322" width="397" height="158" key="NewPhpFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1627634061317" />
+    <state x="100" y="127" width="1166" height="541" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1628953321517">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="416" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1618441271061" />
-    <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1617051694882">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1617051694882" />
-    <state x="518" y="79" width="319" height="643" key="RollbackChangesDialog" timestamp="1617571716112">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="518" y="79" width="319" height="643" key="RollbackChangesDialog/0.27.1366.741@0.27.1366.741" timestamp="1617571716112" />
-    <state x="235" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1616615689519">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="235" y="31" width="1022" height="737" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1616615689519" />
-    <state x="455" y="317" width="445" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617873595296">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="455" y="317" width="445" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1617873595296" />
-    <state x="347" y="174" key="run.anything.popup" timestamp="1616452493877">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="347" y="174" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1616452493877" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1618417075168">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1618417075168" />
-    <state x="408" y="299" width="540" height="203" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1617874162282">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="408" y="299" width="540" height="203" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1366.741@0.27.1366.741" timestamp="1617874162282" />
+    <state x="100" y="127" width="1166" height="541" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.1366.741@0.27.1366.741" timestamp="1628953321517" />
   </component>
 </project>
